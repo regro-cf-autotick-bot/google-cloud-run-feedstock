@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: google-cloud-run
-  version: 0.14.0
+  version: "0.15.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/google_cloud_run-${{ version }}.tar.gz
-  sha256: e3a142c6a4d7ca8a944858cb1c142c13414e78eed48c53dd3be53f86b260ee95
+  sha256: 158f264643f982bfa4f4f18f9e28c56ea00ea95c248bc8a746e159b538afab57
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
